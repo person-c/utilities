@@ -1,0 +1,27 @@
+# R specific
+.Rhistory
+.RData
+.Rproj.user
+
+# Common data formats
+*.fastq
+*.fasta
+*.bam
+*.sam
+*.bed
+*.vcf
+*.csv
+*.tsv
+*.txt
+
+# Output & results directories
+data/
+results/
+output/
+docs/
+
+# Common image/document formats (if they are results)
+*.pdf
+*.png
+*.jpeg
+*.svg
