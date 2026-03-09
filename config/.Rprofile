@@ -14,6 +14,12 @@ if (interactive() && Sys.getenv("TERM_PROGRAM") == "vscode") {
   }
 }
 
+# init vscode-R in debug R console
+if (Sys.getenv("VSCODE_DEBUG_SESSION") == "1") {
+    Sys.setenv(TERM_PROGRAM = "vscode")
+    source(file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R"))
+}
+
 # rstudio package manager
 if (.Platform$OS.type != "windows") {
   options(repos = c(REPO_NAME = "https://packagemanager.rstudio.com/cran/latest"))
